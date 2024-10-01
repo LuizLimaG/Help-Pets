@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		784BFE5D2C99D7FA007ABDCA /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BFE5C2C99D7FA007ABDCA /* SettingsTableViewCell.swift */; };
 		784BFE602C99DA21007ABDCA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BFE5F2C99DA21007ABDCA /* Category.swift */; };
+		789159F92CAC4D3500EF6D61 /* SecondContainerCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789159F82CAC4D3500EF6D61 /* SecondContainerCards.swift */; };
 		DC022CE42C88A5BA00F64A6A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC022CE32C88A5BA00F64A6A /* LoginViewController.swift */; };
 		DC2637F22C8F3C0C004B8EB2 /* FindYourPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2637F12C8F3C0C004B8EB2 /* FindYourPetViewController.swift */; };
 		DC2637F42C8F3C24004B8EB2 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2637F32C8F3C24004B8EB2 /* ChatsViewController.swift */; };
@@ -28,12 +29,12 @@
 		DCF06A972C860143001A1506 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCF06A952C860143001A1506 /* LaunchScreen.storyboard */; };
 		DCF06AA42C860806001A1506 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF06AA32C860806001A1506 /* HomeViewController.swift */; };
 		DCF06AA62C860851001A1506 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF06AA52C860851001A1506 /* TabBarController.swift */; };
-		DCF866122CAAE8D8001792C2 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF866112CAAE8D8001792C2 /* ScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		784BFE5C2C99D7FA007ABDCA /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		784BFE5F2C99DA21007ABDCA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		789159F82CAC4D3500EF6D61 /* SecondContainerCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondContainerCards.swift; sourceTree = "<group>"; };
 		DC022CE32C88A5BA00F64A6A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DC2637F12C8F3C0C004B8EB2 /* FindYourPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindYourPetViewController.swift; sourceTree = "<group>"; };
 		DC2637F32C8F3C24004B8EB2 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +56,6 @@
 		DCF06A982C860143001A1506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCF06AA32C860806001A1506 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DCF06AA52C860851001A1506 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		DCF866112CAAE8D8001792C2 /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +84,22 @@
 				784BFE5F2C99DA21007ABDCA /* Category.swift */,
 			);
 			path = SettingsTableView;
+			sourceTree = "<group>";
+		};
+		789159F62CAC4CF000EF6D61 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				789159F72CAC4CFE00EF6D61 /* SecondContainerCards */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		789159F72CAC4CFE00EF6D61 /* SecondContainerCards */ = {
+			isa = PBXGroup;
+			children = (
+				789159F82CAC4D3500EF6D61 /* SecondContainerCards.swift */,
+			);
+			path = SecondContainerCards;
 			sourceTree = "<group>";
 		};
 		DC022CE22C88A59D00F64A6A /* Login */ = {
@@ -155,7 +171,7 @@
 		DC57AD8C2C8A04C7002470B5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				DCF866102CAAE8BB001792C2 /* Scroll */,
+				789159F62CAC4CF000EF6D61 /* Cards */,
 				DC57AD8D2C8A04D6002470B5 /* Header */,
 			);
 			path = Components;
@@ -259,14 +275,6 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
-		DCF866102CAAE8BB001792C2 /* Scroll */ = {
-			isa = PBXGroup;
-			children = (
-				DCF866112CAAE8D8001792C2 /* ScrollView.swift */,
-			);
-			path = Scroll;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -350,7 +358,7 @@
 				DCF06AA62C860851001A1506 /* TabBarController.swift in Sources */,
 				DCF06A8D2C860142001A1506 /* SceneDelegate.swift in Sources */,
 				DC2637FF2C8F49A0004B8EB2 /* FindPetsCustomView.swift in Sources */,
-				DCF866122CAAE8D8001792C2 /* ScrollView.swift in Sources */,
+				789159F92CAC4D3500EF6D61 /* SecondContainerCards.swift in Sources */,
 				DC57AD8B2C89E65A002470B5 /* RegisterViewController.swift in Sources */,
 				DC022CE42C88A5BA00F64A6A /* LoginViewController.swift in Sources */,
 				DC2637F42C8F3C24004B8EB2 /* ChatsViewController.swift in Sources */,
