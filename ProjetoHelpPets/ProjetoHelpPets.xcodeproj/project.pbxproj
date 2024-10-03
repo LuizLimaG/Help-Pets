@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		784BFE5D2C99D7FA007ABDCA /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BFE5C2C99D7FA007ABDCA /* SettingsTableViewCell.swift */; };
 		784BFE602C99DA21007ABDCA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BFE5F2C99DA21007ABDCA /* Category.swift */; };
+		788D2C5C2CAEEE6300C7FE1A /* SecondContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788D2C5B2CAEEE6300C7FE1A /* SecondContainer.swift */; };
+		788D2C5F2CAEF18200C7FE1A /* FirstContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788D2C5E2CAEF18200C7FE1A /* FirstContainer.swift */; };
+		788D2C622CAEF2D600C7FE1A /* ThirdContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788D2C612CAEF2D600C7FE1A /* ThirdContainer.swift */; };
 		789159F92CAC4D3500EF6D61 /* SecondContainerCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789159F82CAC4D3500EF6D61 /* SecondContainerCards.swift */; };
 		DC022CE42C88A5BA00F64A6A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC022CE32C88A5BA00F64A6A /* LoginViewController.swift */; };
 		DC2637F22C8F3C0C004B8EB2 /* FindYourPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2637F12C8F3C0C004B8EB2 /* FindYourPetViewController.swift */; };
@@ -34,6 +37,9 @@
 /* Begin PBXFileReference section */
 		784BFE5C2C99D7FA007ABDCA /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		784BFE5F2C99DA21007ABDCA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		788D2C5B2CAEEE6300C7FE1A /* SecondContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondContainer.swift; sourceTree = "<group>"; };
+		788D2C5E2CAEF18200C7FE1A /* FirstContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstContainer.swift; sourceTree = "<group>"; };
+		788D2C612CAEF2D600C7FE1A /* ThirdContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdContainer.swift; sourceTree = "<group>"; };
 		789159F82CAC4D3500EF6D61 /* SecondContainerCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondContainerCards.swift; sourceTree = "<group>"; };
 		DC022CE32C88A5BA00F64A6A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DC2637F12C8F3C0C004B8EB2 /* FindYourPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindYourPetViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +90,40 @@
 				784BFE5F2C99DA21007ABDCA /* Category.swift */,
 			);
 			path = SettingsTableView;
+			sourceTree = "<group>";
+		};
+		788D2C592CAEEE3800C7FE1A /* StackViewContainers */ = {
+			isa = PBXGroup;
+			children = (
+				788D2C5D2CAEF16800C7FE1A /* FirstContainer */,
+				788D2C5A2CAEEE4400C7FE1A /* SecondContainer */,
+				788D2C602CAEF2AC00C7FE1A /* ThirdContainer */,
+			);
+			path = StackViewContainers;
+			sourceTree = "<group>";
+		};
+		788D2C5A2CAEEE4400C7FE1A /* SecondContainer */ = {
+			isa = PBXGroup;
+			children = (
+				788D2C5B2CAEEE6300C7FE1A /* SecondContainer.swift */,
+			);
+			path = SecondContainer;
+			sourceTree = "<group>";
+		};
+		788D2C5D2CAEF16800C7FE1A /* FirstContainer */ = {
+			isa = PBXGroup;
+			children = (
+				788D2C5E2CAEF18200C7FE1A /* FirstContainer.swift */,
+			);
+			path = FirstContainer;
+			sourceTree = "<group>";
+		};
+		788D2C602CAEF2AC00C7FE1A /* ThirdContainer */ = {
+			isa = PBXGroup;
+			children = (
+				788D2C612CAEF2D600C7FE1A /* ThirdContainer.swift */,
+			);
+			path = ThirdContainer;
 			sourceTree = "<group>";
 		};
 		789159F62CAC4CF000EF6D61 /* Cards */ = {
@@ -171,6 +211,7 @@
 		DC57AD8C2C8A04C7002470B5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				788D2C592CAEEE3800C7FE1A /* StackViewContainers */,
 				789159F62CAC4CF000EF6D61 /* Cards */,
 				DC57AD8D2C8A04D6002470B5 /* Header */,
 			);
@@ -353,6 +394,7 @@
 				DCF06A8B2C860142001A1506 /* AppDelegate.swift in Sources */,
 				DC57AD8F2C8A04E5002470B5 /* HeaderComponent.swift in Sources */,
 				DC2637F82C8F3C3C004B8EB2 /* SettingsViewController.swift in Sources */,
+				788D2C5C2CAEEE6300C7FE1A /* SecondContainer.swift in Sources */,
 				DC2637F22C8F3C0C004B8EB2 /* FindYourPetViewController.swift in Sources */,
 				DCCC5DCB2C91DE4B004D8FB0 /* ChatsCustomView.swift in Sources */,
 				DCF06AA62C860851001A1506 /* TabBarController.swift in Sources */,
@@ -362,8 +404,10 @@
 				DC57AD8B2C89E65A002470B5 /* RegisterViewController.swift in Sources */,
 				DC022CE42C88A5BA00F64A6A /* LoginViewController.swift in Sources */,
 				DC2637F42C8F3C24004B8EB2 /* ChatsViewController.swift in Sources */,
+				788D2C622CAEF2D600C7FE1A /* ThirdContainer.swift in Sources */,
 				DC2637F62C8F3C31004B8EB2 /* FavoritesViewController.swift in Sources */,
 				DCF06AA42C860806001A1506 /* HomeViewController.swift in Sources */,
+				788D2C5F2CAEF18200C7FE1A /* FirstContainer.swift in Sources */,
 				DC2637FD2C8F46FE004B8EB2 /* FindPetCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
