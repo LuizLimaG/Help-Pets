@@ -1,10 +1,3 @@
-//
-//  SettingsViewController.swift
-//  ProjetoFodaseDeSouza
-//
-//  Created by COTEMIG on 09/09/24.
-//
-
 import UIKit
 
 class SettingsViewController: UIViewController {
@@ -53,13 +46,10 @@ class SettingsViewController: UIViewController {
     }
     
     private func subViewsConstraintsConfiguration() {
-        let screen = UIScreen.main.bounds
-        
         NSLayoutConstraint.activate([
             headerComponent.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 0),
             headerComponent.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 0),
             headerComponent.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: 0),
-            headerComponent.heightAnchor.constraint(equalToConstant: screen.height / 8 ),
             
             settingsTableView.topAnchor.constraint(equalTo: headerComponent.bottomAnchor, constant: 40),
             settingsTableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
@@ -94,5 +84,10 @@ extension SettingsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let name = categories[section].name
         return name
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = ProfileViewController()
+        present(vc, animated: true)
     }
 }

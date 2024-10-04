@@ -66,13 +66,10 @@ class FindYourPetViewController: UIViewController {
     
     func subViewsConstraintsConfiguration() {
         
-        let screen = UIScreen.main.bounds
-        
         NSLayoutConstraint.activate([
             headerComponent.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 0),
             headerComponent.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 0),
             headerComponent.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: 0),
-            headerComponent.heightAnchor.constraint(equalToConstant: screen.height / 8 ),
             
             findYourPetSearchPetTextField.topAnchor.constraint(equalTo: headerComponent.bottomAnchor, constant: 10),
             findYourPetSearchPetTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
@@ -85,17 +82,14 @@ class FindYourPetViewController: UIViewController {
             findYourPetCollectionViewPets.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
         ])
     }
-    
 }
 
 
-extension FindYourPetViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+extension FindYourPetViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource, FindPetsCustomViewDelegate {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 280, height: 382)
     }
-}
-
-extension FindYourPetViewController: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
@@ -103,6 +97,14 @@ extension FindYourPetViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FindPetCollectionViewCell.identifier, for: indexPath) as? FindPetCollectionViewCell
         return cell ?? UICollectionViewCell()
-         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        goToDetailsPage()
+    }
+    
+    func goToDetailsPage() {
+        let vc = PetDetailsViewController()
+        present(vc, animated: true)
     }
 }

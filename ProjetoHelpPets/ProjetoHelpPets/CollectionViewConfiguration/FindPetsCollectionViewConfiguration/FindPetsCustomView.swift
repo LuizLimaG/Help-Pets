@@ -1,6 +1,12 @@
 import UIKit
 
+protocol FindPetsCustomViewDelegate {
+    func goToDetailsPage()
+}
+
 class FindPetsCustomView: UIView {
+    
+    var delegate: FindPetsCustomViewDelegate?
     
     private lazy var petImage: UIImageView = {
         let view = UIImageView()
@@ -12,8 +18,8 @@ class FindPetsCustomView: UIView {
     private lazy var petName: UILabel = {
         let view = UILabel(frame: .zero)
         view.text = "Júnior Alfredo Gomes"
-        view.font = UIFont(name: "Futura", size: 18)
-        view.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        view.font = UIFont(name: "Futura", size: 20)
+        view.font = UIFont.systemFont(ofSize: 20, weight: .medium)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -21,8 +27,8 @@ class FindPetsCustomView: UIView {
     private lazy var breed: UILabel = {
         let view = UILabel(frame: .zero)
         view.text = "Raça:"
-        view.font = UIFont(name: "Futura", size: 16)
-        view.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        view.font = UIFont(name: "Futura", size: 18)
+        view.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -30,7 +36,8 @@ class FindPetsCustomView: UIView {
     private lazy var petBreed: UILabel = {
         let view = UILabel(frame: .zero)
         view.text = "Golden"
-        view.font = UIFont(name: "Futura", size: 14)
+        view.font = UIFont(name: "Futura", size: 16)
+        view.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -38,8 +45,8 @@ class FindPetsCustomView: UIView {
     private lazy var age: UILabel = {
         let view = UILabel(frame: .zero)
         view.text = "Idade:"
-        view.font = UIFont(name: "Futura", size: 16)
-        view.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        view.font = UIFont(name: "Futura", size: 18)
+        view.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -47,35 +54,33 @@ class FindPetsCustomView: UIView {
     private lazy var petAge: UILabel = {
         let view = UILabel(frame: .zero)
         view.text = "9 meses"
-        view.font = UIFont(name: "Futura", size: 14)
+        view.font = UIFont(name: "Futura", size: 16)
+        view.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     private lazy var porte: UILabel = {
         let view = UILabel(frame: .zero)
-        view.text = "Idade:"
-        view.font = UIFont(name: "Futura", size: 16)
-        view.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        view.text = "Porte:"
+        view.font = UIFont(name: "Futura", size: 18)
+        view.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     private lazy var petPorte: UILabel = {
         let view = UILabel(frame: .zero)
-        view.text = "9 meses"
-        view.font = UIFont(name: "Futura", size: 14)
+        view.text = "Médio"
+        view.font = UIFont(name: "Futura", size: 16)
+        view.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
-    private lazy var showInfoFavoritePet: UIButton = {
-        let view = UIButton(frame: .zero)
-        view.setTitle("Conhecer Pet", for: .normal)
-        view.backgroundColor = .orange
-        view.setTitleColor(UIColor.black, for: .normal)
-        view.titleLabel?.font = UIFont.systemFont(ofSize: 15)
-        view.layer.cornerRadius = 15
+    private lazy var showInfoFavoritePet: UIImageView = {
+        let view = UIImageView(frame: .zero)
+        view.image = UIImage(named: "info")
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -120,23 +125,24 @@ class FindPetsCustomView: UIView {
             age.leadingAnchor.constraint(equalTo: breed.leadingAnchor),
             
             petAge.centerYAnchor.constraint(equalTo: age.centerYAnchor),
-            petAge.leadingAnchor.constraint(equalTo: age.trailingAnchor, constant: 10),
+            petAge.leadingAnchor.constraint(equalTo: petBreed.leadingAnchor),
             
             porte.topAnchor.constraint(equalTo: age.bottomAnchor, constant: 5),
             porte.leadingAnchor.constraint(equalTo: age.leadingAnchor),
             
             petPorte.centerYAnchor.constraint(equalTo: porte.centerYAnchor),
-            petPorte.leadingAnchor.constraint(equalTo: age.trailingAnchor, constant: 10),
+            petPorte.leadingAnchor.constraint(equalTo: petAge.leadingAnchor),
             
-            showInfoFavoritePet.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 0),
-            showInfoFavoritePet.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: 0),
-            showInfoFavoritePet.heightAnchor.constraint(equalToConstant: 45),
-            showInfoFavoritePet.widthAnchor.constraint(equalToConstant: 110)
+            showInfoFavoritePet.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -10),
+            showInfoFavoritePet.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -10),
         ])
     }
     
     func configureComponentData(image: UIImage, text: String) {
         petImage.image = image
-    }
+    }  
     
+    @objc func buttonTapped() {
+        delegate?.goToDetailsPage()
+    }
 }

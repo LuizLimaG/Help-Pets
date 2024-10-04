@@ -21,7 +21,10 @@ class HeaderComponent: UIView {
     
     func buildLayout() {
         self.addSubview(logoImage)
-               
+        
+        let screen = UIScreen.main.bounds
+        self.heightAnchor.constraint(equalToConstant: screen.height / 12).isActive = true
+        
         NSLayoutConstraint.activate([
             logoImage.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
             logoImage.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),

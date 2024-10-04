@@ -59,13 +59,10 @@ class HomeViewController: UIViewController {
     
     private func subViewsConstraintsConfiguration() {
         
-        let screen = UIScreen.main.bounds
-        
         NSLayoutConstraint.activate([
             headerComponent.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
             headerComponent.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0),
             headerComponent.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0),
-            headerComponent.heightAnchor.constraint(equalToConstant: screen.height / 12),
             
             scrollView.topAnchor.constraint(equalTo: headerComponent.bottomAnchor),
             scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),

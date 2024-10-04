@@ -66,13 +66,10 @@ class FavoritesViewController: UIViewController {
     
     func subViewsConstraintsConfiguration() {
         
-        let screen = UIScreen.main.bounds
-        
         NSLayoutConstraint.activate([
             headerComponent.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 0),
             headerComponent.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 0),
             headerComponent.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: 0),
-            headerComponent.heightAnchor.constraint(equalToConstant: screen.height / 8 ),
             
             findYourPetSearchPetTextField.topAnchor.constraint(equalTo: headerComponent.bottomAnchor, constant: 10),
             findYourPetSearchPetTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),

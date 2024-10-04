@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		780F5DA92CB02E1300DB59DC /* PetDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F5DA82CB02E1300DB59DC /* PetDetailsViewController.swift */; };
+		780F5DAC2CB0465C00DB59DC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F5DAB2CB0465C00DB59DC /* ProfileViewController.swift */; };
 		784BFE5D2C99D7FA007ABDCA /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BFE5C2C99D7FA007ABDCA /* SettingsTableViewCell.swift */; };
 		784BFE602C99DA21007ABDCA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BFE5F2C99DA21007ABDCA /* Category.swift */; };
 		788D2C5C2CAEEE6300C7FE1A /* SecondContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788D2C5B2CAEEE6300C7FE1A /* SecondContainer.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		780F5DA82CB02E1300DB59DC /* PetDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailsViewController.swift; sourceTree = "<group>"; };
+		780F5DAB2CB0465C00DB59DC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		784BFE5C2C99D7FA007ABDCA /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		784BFE5F2C99DA21007ABDCA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		788D2C5B2CAEEE6300C7FE1A /* SecondContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondContainer.swift; sourceTree = "<group>"; };
@@ -75,6 +79,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		780F5DA72CB02DD100DB59DC /* PetDetails */ = {
+			isa = PBXGroup;
+			children = (
+				780F5DA82CB02E1300DB59DC /* PetDetailsViewController.swift */,
+			);
+			path = PetDetails;
+			sourceTree = "<group>";
+		};
+		780F5DAA2CB0464D00DB59DC /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				780F5DAB2CB0465C00DB59DC /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		784BFE5A2C99D6D8007ABDCA /* TableViewConfiguration */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +301,8 @@
 		DCF06A9E2C860236001A1506 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				780F5DAA2CB0464D00DB59DC /* Profile */,
+				780F5DA72CB02DD100DB59DC /* PetDetails */,
 				DC2637F02C8F3BC5004B8EB2 /* Settings */,
 				DC2637EF2C8F3BBA004B8EB2 /* Favorites */,
 				DC2637EE2C8F3BAA004B8EB2 /* Chat */,
@@ -393,6 +415,7 @@
 				DCCC5DC92C91DE28004D8FB0 /* ChatsCollectionViewCell.swift in Sources */,
 				DCF06A8B2C860142001A1506 /* AppDelegate.swift in Sources */,
 				DC57AD8F2C8A04E5002470B5 /* HeaderComponent.swift in Sources */,
+				780F5DA92CB02E1300DB59DC /* PetDetailsViewController.swift in Sources */,
 				DC2637F82C8F3C3C004B8EB2 /* SettingsViewController.swift in Sources */,
 				788D2C5C2CAEEE6300C7FE1A /* SecondContainer.swift in Sources */,
 				DC2637F22C8F3C0C004B8EB2 /* FindYourPetViewController.swift in Sources */,
@@ -407,6 +430,7 @@
 				788D2C622CAEF2D600C7FE1A /* ThirdContainer.swift in Sources */,
 				DC2637F62C8F3C31004B8EB2 /* FavoritesViewController.swift in Sources */,
 				DCF06AA42C860806001A1506 /* HomeViewController.swift in Sources */,
+				780F5DAC2CB0465C00DB59DC /* ProfileViewController.swift in Sources */,
 				788D2C5F2CAEF18200C7FE1A /* FirstContainer.swift in Sources */,
 				DC2637FD2C8F46FE004B8EB2 /* FindPetCollectionViewCell.swift in Sources */,
 			);
