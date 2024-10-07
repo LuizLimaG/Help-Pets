@@ -71,7 +71,7 @@ class PetDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewConfiguration()
-        constraintsConfiguration()
+        subViewConstraintsConfiguration()
     }
     
     func viewConfiguration() {
@@ -85,7 +85,7 @@ class PetDetailsViewController: UIViewController {
         view.addSubview(goToChat)
     }
     
-    func constraintsConfiguration() {
+    func subViewConstraintsConfiguration() {
         NSLayoutConstraint.activate([
             detailsPetTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             detailsPetTitle.trailingAnchor.constraint(equalTo: view.trailingAnchor),
