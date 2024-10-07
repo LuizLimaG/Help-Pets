@@ -35,7 +35,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewConfiguration()
-        constraintsConfiguration()
+        subViewConstraintsConfiguration()
     }
     
     func viewConfiguration() {
@@ -45,7 +45,7 @@ class ProfileViewController: UIViewController {
         view.addSubview(userName)
     }
     
-    func constraintsConfiguration() {
+    func subViewConstraintsConfiguration() {
         NSLayoutConstraint.activate([
             profilePageTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             profilePageTitle.trailingAnchor.constraint(equalTo: view.trailingAnchor),
