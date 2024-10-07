@@ -109,11 +109,11 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setConfigurationsOfView()
+        viewConfiguration()
         subViewsConstraintsConfiguration()
     }
     
-    private func setConfigurationsOfView() {
+    private func viewConfiguration() {
         view.addSubview(titleRegisterPageLabel)
         view.addSubview(subTitleRegisterPageLabel)
         view.addSubview(nameRegisterPageTextField)
