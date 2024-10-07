@@ -90,11 +90,11 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewConfigurations()
+        viewConfiguration()
         subViewsConstraintsConfiguration()
     }
     
-    private func viewConfigurations() {
+    private func viewConfiguration() {
         view.addSubview(titleLoginPageLabel)
         view.addSubview(subTitleLoginPageLabel)
         view.addSubview(emailLoginPageTextField)
